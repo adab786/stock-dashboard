@@ -67,6 +67,7 @@ export const fetchHistoricalData = async (
 ) => {
   const url = `${basePath}/stock/candle?symbol=${stockSymbol}&resolution=${resolution}&from=${from}&to=${to}&token=${process.env.REACT_APP_API_KEY}`;
   const response = await fetch(url);
+  console.log(response);
 
   if (!response.ok) {
     const message = `An error has occured: ${response.status}`;
